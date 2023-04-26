@@ -42,6 +42,7 @@ function make_connection(String $db_name): false|mysqli|null
 
 /**
  * Inserts data into the table with the correct properties.
+ * Return True if worked, returns False when something went wrong.
  *
  * @param mysqli $con A SQL connection that has already been established.
  * @param string $table A table name that exists in database that ahas been set in SQL connection.
@@ -71,6 +72,7 @@ function insert_data(mysqli $con, string $table, array $values): bool
 
 /**
  * Fetches data from database with the right conditions
+ * Returns fetched data if good, returns [ERROR] if something went wrong.
  *
  * @param mysqli $con A SQL connection that has already been established.
  * @param string $table A table name that exists in database that ahas been set in SQL connection.
@@ -120,6 +122,7 @@ function fetch_data(mysqli $con, string $table, array $columns, array $where = [
 
 /**
  * This function deletes data when the conditions are met.
+ * Return True if worked, returns False when something went wrong.
  *
  * @param mysqli $con A SQL connection that has already been established.
  * @param string $table A table name that exists in database that ahas been set in SQL connection.
@@ -147,6 +150,7 @@ function deleteData(mysqli $con, string $table, Array $where): bool
 
 /**
  * This function updates rows when the conditions are met.
+ * Return True if worked, returns False when something went wrong.
  *
  * @param mysqli $con A SQL connection that has already been established.
  * @param string $table A table name that exists in database that ahas been set in SQL connection.
