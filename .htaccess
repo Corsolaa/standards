@@ -1,0 +1,13 @@
+RewriteEngine on
+# The requested filename "/index" is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# There is a file on the file system named as the request, with extension .php
+RewriteCond %{REQUEST_FILENAME}.php -f
+# If all of the above is true, pretend that the ".php" file had been called
+# by rewriting the request appending .php
+RewriteRule ^(.*)$ $1.php
+
+
+# Return 404 if original request is .php
+RewriteCond %{REQUEST_FILENAME} "\.php$"
+RewriteRule .* - [L,R=404]
