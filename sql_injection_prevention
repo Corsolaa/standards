@@ -1,0 +1,10 @@
+PHP, SQL injection
+	JS scripts in database.
+		- Zorg ervoor dat er geen code kan geschreven worden in database.
+			trim()
+			stripslashe()
+			htmlspecialchars()
+
+	MySql injections, OR 1=1
+		- Zorg ervoor dat er geen MySql special caracters in kunnen.
+			mysqli_real_escape_string()
