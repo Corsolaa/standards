@@ -11,3 +11,8 @@ RewriteRule ^(.*)$ $1.php
 # Return 404 if original request is .php
 RewriteCond %{REQUEST_FILENAME} "\.php$"
 RewriteRule .* - [L,R=404]
+
+# Don't allow access from outside
+<Files "*">
+  Require all denied
+</Files>
