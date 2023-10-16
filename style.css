@@ -1,22 +1,11 @@
 :root {
-    --mainWidth: 1500px;
-
-    --headerColor: white;
-    --footerColor: white;
-    --backgroundColor: white;
-    --buttonColor: black;
-
-    --headerTextColor: black;
-    --buttonTextColor: white;
-    --textColor: black;
-    --footerTextColor: black;
+    --text: black;
+    --background: white;
 }
 
-*, *::before, *::after {
+/* Removes all the stupid things from browser and makes sure everything fits well. */
+*,  *::before, *::after  {
     box-sizing: border-box;
-}
-
-* {
     margin: 0;
     padding: 0;
 }
@@ -29,16 +18,18 @@
 
 body {
     min-height: 100vh;
-    color: var(--textColor);
+    color: var(--text);
     font-family: sans-serif;
-    background: var(--backgroundColor);
+    background: var(--background);
 }
 
+/* Makes sure that images always fit and are visible. */
 img, picture, svg, video {
     display: block;
     max-width: 100%;
 }
 
+/* Makes sure that all clickable have a pointer cursor. */
 label,
 button,
 select,
