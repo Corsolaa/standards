@@ -1,8 +1,3 @@
-:root {
-    --text: black;
-    --background: white;
-}
-
 /* Removes all the stupid things from browser and makes sure everything fits well. */
 *,  *::before, *::after  {
     box-sizing: border-box;
@@ -18,9 +13,9 @@
 
 body {
     min-height: 100vh;
-    color: var(--text);
+    color: #3E4042;
     font-family: sans-serif;
-    background: var(--background);
+    background: #EAE6E5;
 }
 
 /* Makes sure that images always fit and are visible. */
